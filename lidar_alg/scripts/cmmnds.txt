@@ -1,6 +1,0 @@
-roslaunch jetauto_slam slam.launch
-/jetauto_1/scan
-sensor_msgs/LaserScan
-
-roslaunch jetauto_slam jetauto_robot.launch
-roslaunch jetauto_controller jetauto_controller.launch
