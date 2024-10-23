@@ -1,0 +1,25 @@
+rate: 10
+
+a_vel: 
+  name: angular_velocity
+  val: 0.2
+
+l_vel: 
+  name: linear_velocity
+  val: 0.1
+
+l_l_vel:
+  name: limit_linear_velocity
+  val: 0.15
+
+l_a_vel:
+  name: limit_angular_velocity
+  val: 0.3
+
+distance:
+  name: min_distance
+  min_dist: 0.4
+
+control:
+  name: control_proporcional
+  kp: 0.13

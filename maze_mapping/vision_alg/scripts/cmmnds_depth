@@ -1,0 +1,6 @@
+roslaunch jetauto_peripherals astrapro.launch
+export ROS_MASTER_URI=http://192.168.149.1:11311
+rosrun rviz rviz
+
+
+rostopic echo camera/depth/info
