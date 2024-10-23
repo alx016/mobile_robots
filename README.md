@@ -15,16 +15,9 @@ The projects I developed during this semester were:
       target. For this project those targets were 3 soda cans. Once the robot found them,
       it would use its robotic arm to reach for one of those cans and take it back to the
       starting position.
-      
-    * Sensors: Camera, LiDAR,
-    * Algorithms: 
-* Control over 2 Omnidirectional Mobile Robots
-    * 
 
-
-### Tools, Programs and stuff
-* Robot Operating System (ROS)
-    * Noetic for Ubuntu 18.04
-* Ubuntu 18.04
-* Jetson Nano
-* Arduino
+* Control over 2 Omnidirectional Mobile Robots (OMR)
+    * Using a camera's range vision as a X and Y plane, control the movement of two OMR
+      by giving a Lider Vritual Robot the coordinates I wanted them to visit. Both Robots
+      would respect each other space and act as magnets whenever they were to close or to
+      separate one from the other.  
