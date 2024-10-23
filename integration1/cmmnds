@@ -1,0 +1,4 @@
+roslaunch jetauto_peripherals lidar.launch 
+roslaunch 
+rosrun integration1 obstacleAvoidance.py
+roslaunch jetauto_controller jetauto_controller.launch 

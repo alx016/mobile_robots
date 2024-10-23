@@ -1,0 +1,27 @@
+<launch>
+    <rosparam file = "$(find lidar_alg)/config/jetautoLidar.yaml" command = "load"  />
+
+    <param name="robot_description" command="$(find xacro)/xacro '$(find jetauto_description)/urdf/jetauto.urdf.xacro'
+        odom_frame:=odom
+        base_frame:=base_link
+        depth_camera_name:=depth_camera
+        lidar_view:=true"/>
+
+    <!-- OdometryLaunch-->
+    <!-- <include file="$(find jetauto_controller)/launch/odom_publish.launch"></include> -->
+
+    <!-- Tf and Odometry Nodes -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <!-- Lidar Launch-->
+    <!-- <include file="$(find rplidar_ros)/launch/rplidar.launch"/> -->
+    <include file="$(find jetauto_peripherials)/launch/include/lidar.launch"/>
+
+    <!-- Controllers -->
+    <include file="$(find jetauto_controller)/launch/jetauto_controller.launch"/>
+
+    <!-- Nodes -->
+    <node name="lidar" pkg="lidar_alg" type="lidar.py" output="screen"/>
+    <!-- <node name="path_odom" pkg="lidar_alg" type="path.py" output="screen"/> -->
+
+</launch>

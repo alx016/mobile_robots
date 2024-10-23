@@ -1,0 +1,22 @@
+
+robotName: "ElMamalonTec"
+rate: 40
+samples: 100
+dofs: 4
+links:
+  link1:
+    name: "link_1"
+    length: 0.01
+  link2:
+    name: "link_2"
+    length: 0.13
+  link3:
+    name: "link_3"
+    length: 0.13
+  link4:
+    name: "link_4"
+    length: 0.05
+  allLinks:
+    name: "all_Links"
+    length: [0.01, 0.13, 0.13, 0.05]
+finalPos: [0.1, 0.1, 0.1]

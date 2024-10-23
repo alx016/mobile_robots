@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find hiwonder_servo_controllers)/launch/start.launch"/>
+    <rosparam file = "$(find ik_arm)/config/jetauto.yaml" command = "load"  />
+    <node name="ik_node" pkg="ik_arm" type="ik_node.py" output="screen"/>
+
+</launch>
