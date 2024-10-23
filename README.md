@@ -9,7 +9,7 @@ modeling. This repository contains the algorithms used to
 
 ### Projects
 The projects I developed during this semester were:
-* Maze Mapping using an Omnidirectional Mobile Robot
+* Maze Mapping using an Omnidirectional Mobile Robot (OMR)
     * Using an Omnidirectional Mobile Robot developed navigation algorithms so that
       the robot would be able to avoid obstacles across a Maze until it finds a specific
       target. For this project those targets were 3 soda cans. Once the robot found them,
