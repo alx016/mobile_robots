@@ -17,6 +17,6 @@ use its robotic arm to reach for one of those cans and take it back to the start
 
 
 ### Results:
-[![Control_over_2_OMR](https://img.youtube.com/vi/OEGdVT64pEk/0.jpg)](https://www.youtube.com/watch?v=OEGdVT64pEk)
+[![Maze mapping](https://img.youtube.com/vi/Q_rxTU3xUOk/0.jpg)](https://www.youtube.com/watch?v=Q_rxTU3xUOk)
 
-https://youtu.be/OEGdVT64pEk
+https://youtu.be/Q_rxTU3xUOk
