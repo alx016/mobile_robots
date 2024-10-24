@@ -4,7 +4,7 @@ perform some kind of process or function, and the digital twins that model
 their behavior. During college I work on disciplines such as precision 
 design, artificial intelligence, advanced control, robotics, additive 
 manufacturing and advanced computational modeling. This repository contains 
-the algorithms used to 
+the algorithms used to developed different Mobile Robots. 
 
 
 ### Projects
