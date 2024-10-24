@@ -1,5 +1,5 @@
-## Mobile Robots (CPS)
-The Cyber Physical Systems are a combination of phyisical systems which 
+## Mobile Robots 
+The Cyber Physical Systems (CPS) are a combination of phyisical systems which 
 perform some kind of process or function, and the digital twins that model 
 their behavior. During college I work on disciplines such as precision 
 design, artificial intelligence, advanced control, robotics, additive 
