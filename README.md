@@ -20,4 +20,9 @@ The projects I developed during this semester were:
     * Using a camera's range vision as a X and Y plane, control the movement of two OMR
       by giving a Lider Vritual Robot the coordinates I wanted them to visit. Both Robots
       would respect each other space and act as magnets whenever they were to close or to
-      separate one from the other.  
+      separate one from the other.
+      
+*  Path Follower and Object Identification Differential Mobile Robot
+   *  Using the Differential Mobile Robot's camera, it was able to detect the path generated
+      with the black tape and also the different traffic signs that were introduced at the map.
+      For these I needed to know the Differential Mobile Robot's kinematics.
