@@ -1,10 +1,10 @@
-## Cyber Physical Systems (CPS)
+## Mobile Robots (CPS)
 The Cyber Physical Systems are a combination of phyisical systems which 
 perform some kind of process or function, and the digital twins that model 
-their behavior. During my seventh semester I took this concentration, and 
-I got to work on disciplines such as precision design, artificial intelligence, 
-advanced control, robotics, additive manufacturing and advanced computational 
-modeling. This repository contains the algorithms used to 
+their behavior. During college I work on disciplines such as precision 
+design, artificial intelligence, advanced control, robotics, additive 
+manufacturing and advanced computational modeling. This repository contains 
+the algorithms used to 
 
 
 ### Projects
