@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>
+	<rosparam file = "$(find motor_input)/config/param.yaml" command = "load"  />
+	<node name="motor" pkg ="rosserial_python" type="serial_node.py">
+		<param name="port" type="string" value="/dev/ttyUSB0"/>
+		<param name="baud" type="int" value="57600"/>
+	</node>
+	<node name="signal_generator" pkg="motor_input" type="set_point.py" output="screen" launch-prefix="gnome-terminal --command"/>
+	<node name="controller" pkg="motor_input" type="controller.py" output="screen" launch-prefix="gnome-terminal --command"/>
+	
+	<node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" args="/motor_output /motor_input /set_point" />
+	<node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" />
+</launch>

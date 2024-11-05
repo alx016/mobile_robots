@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<launch>
+    <include file="$(find puzzlebot_world)/launch/puzzlebot_simple_world.launch"/>"
+    <node name="puzzlebotSimulation2" pkg="challenge6" type="puzzlebotSimulation2.py" output="screen"/> 
+</launch>

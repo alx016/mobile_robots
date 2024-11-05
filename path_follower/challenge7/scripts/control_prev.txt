@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+# coding=utf-8
+import rospy
+import numpy as np
+from std_msgs.msg import Float32
+from geometry_msgs.msg import Twist
+import time
+import math
+
+wr = 0
+wl = 0
+
+#Callback functions
+def callback_left(msg):
+	global wl
+	wl = msg.data
+
+def callback_right(msg):
+    global wr
+    wr = msg.data
+
+# Constants & Variables
+r = 0.05    #m. wheel radius
+l = 0.19    #m. Distance between robots wheels
+
+x = 0       #Initial position
+y = 0       #Initial position
+theta = 0  
+
+#Target positions
+xt = 2      #Wanted position
+yt = 0
+
+kv = 0.5
+kw = 2
+
+if __name__=='__main__':
+
+    #Initialise and Setup node
+    rospy.init_node("control")
+    rate = rospy.Rate(100) #HZ
+    #Setup Publishers and subscribers here
+    rospy.Subscriber("/wl", Float32, callback_left)
+    rospy.Subscriber("/wr", Float32, callback_right)
+    pub = rospy.Publisher("cmd_vel", Twist, queue_size = 10)
+	#Run the node
+    init_time = 0
+    d = 1   # Distance between target and actual position 
+    dt = 0
+    while not rospy.is_shutdown():
+        twist = Twist()
+        while d > 0.2: 
+            init_time = time.time()
+            rate.sleep()    #Short delay to bring everything up to date
+            dt = time.time() - init_time
+            rospy.loginfo("dt")
+            rospy.loginfo(dt)
+            vR = r * ((wr + wl)/2) #Calculo de la velocidad rad/seg
+            wR = r * ((wr - wl)/l)  #Calculo de la velocidad angular 
+            rospy.loginfo("vR")
+            rospy.loginfo(vR)
+            rospy.loginfo("wR")
+            rospy.loginfo(wR)
+            theta1 = theta + wR * dt
+            x1 = x + vR * math.cos(theta) 
+            y1 = y + vR * math.sin(theta) 
+            thetad = np.arctan2(yt - y, xt - x) - theta
+            if(thetad > math.pi):
+                thetad = thetad - 2*math.pi
+            elif(thetad < -math.pi):
+                 thetad = thetad + 2*math.pi
+            d = math.sqrt((xt - x)**2 + (yt - y)**2)
+            v = kv * d
+            w = kw * thetad
+            if v > 0.3:
+                v = 0.25
+            rospy.loginfo("x")
+            rospy.loginfo(x)
+            rospy.loginfo("v")
+            rospy.loginfo(v)
+            rospy.loginfo("w")
+            rospy.loginfo(w)
+            twist.linear.x = v
+            twist.angular.z = w
+            pub.publish(twist)
+            theta = theta1
+            x = x1
+            y = y1      
+            # Podría necesitar spinOnce
+        twist.linear.x = 0
+        twist.angular.z = 0
+        pub.publish(twist)
+        rospy.loginfo("FINISH")
+        init_time = rospy.get_time()
+        exit()
+
+

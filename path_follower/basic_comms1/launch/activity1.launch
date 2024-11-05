@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+	<rosparam command = "load" file="$(find basic_comms1)/config/params.yaml"/>
+	<rosparam command = "load" file="$(find basic_comms1)/config/params1.yaml"/>
+	<group ns = "Group1">
+		<node pkg="basic_comms1" type="talker.py" name="talker" output="screen" launch-prefix="gnome-terminal --command" />
+		<node pkg="basic_comms1" type="listener.py" name="listener" output="screen" launch-prefix="gnome-terminal --command" />
+	</group>
+
+	<group ns = "Group2">
+		<node pkg="basic_comms1" type="talker.py" name="talker" output="screen" launch-prefix="gnome-terminal --command" />
+		<node pkg="basic_comms1" type="listener.py" name="listener" output="screen" launch-prefix="gnome-terminal --command" />
+	</group>
+	<node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen"/>
+</launch>

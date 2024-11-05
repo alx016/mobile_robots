@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="autoNav" type="cam_ex.py" name="imageCapture"
+	output="screen" />
+	
+	<node pkg="autoNav" type="objectIdentifier.py" name="objectIdentifier"
+	output="screen" />
+	
+	<node pkg="autoNav" type="lineFollower.py" name="lineFollower"
+	output="screen" />	
+
+	<node pkg="autoNav" type="stateMachine.py" name="stateMachine"
+	output="screen" />
+
+	<!-- <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen"/> -->
+
+</launch>
