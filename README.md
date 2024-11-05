@@ -27,7 +27,10 @@ The projects I developed during college were:
       with the black tape and also the different traffic signs that were introduced at the map.
       For these I needed to know the Differential Mobile Robot's kinematics.
 
-### Differential Mobile Robot (DMR)
-This type of mobile robot uses two separately driven wheels placed on either side of the robot's body. This type of configuration allows the robot to change directions without the need of an additional steering mechanism.
+### Differential Mobile Robot
+This type of mobile robot uses two separately driven wheels placed on either side of the robot's body. This type of configuration allows the robot to change directions without the need of an additional steering mechanism. By controlling the speed of each wheel separately, the robot can move forward, backward, turn in place, or move diagonally. 
 
 ![image](https://github.com/user-attachments/assets/159c9f75-d314-48e2-9bbc-4f82d16a7c5b)
+
+### Omnidirectional Mobile Robot
+This type can move in any direction instantaneously, without needing to turn. This is achieved through the use of the Mecanum wheels or Omni wheels.
